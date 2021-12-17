@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Bukan snack pilus rasa ayam bawang, tapi small project 1 Sekolah Mobile
