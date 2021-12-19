@@ -10,7 +10,6 @@ void main() {
 
 void drawBoard(int squareSize) {
   // Selamat ngoding :)
-  // Selamat ngoding :)
 
   List<dynamic> listGrid = [];
 
