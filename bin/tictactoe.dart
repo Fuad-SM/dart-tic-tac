@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   stdout.write("Mau ukuran papan berapa x berapa? ");
-  int userChoice = int.parse(stdin.readLineSync());
+  int userChoice = int.parse(stdin.readLineSync().toString());
   print("Berikut papan dengan ukuran $userChoice x $userChoice : \n");
 
   drawBoard(userChoice);
@@ -34,8 +34,8 @@ void drawBoard(int squareSize) {
   }
 
   for (int row = 0; row < listGrid.length; row++) {
-    for (int c = 0; c < listGrid[0].length; c++) {
-      stdout.write(listGrid[row][c]);
+    for (int col = 0; col < listGrid.length; col++) {
+      stdout.write(listGrid[row][col]);
     }
     print('');
   }
