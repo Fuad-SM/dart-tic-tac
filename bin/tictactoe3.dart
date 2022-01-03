@@ -4,12 +4,12 @@ void main() {
   // Empty board
 
   stdout.write('Input Coordinat:');
-  String? col = stdin.readLineSync();
+  String col = stdin.readLineSync();
 
   List<List<String>> initialBoard =
       List.generate(3, (_) => List.generate(3, (_) => '_'));
 
-  inputBoard(initialBoard, true, parsingList(col!.replaceAll(' ', '')));
+  inputBoard(initialBoard, true, parsingList(col.replaceAll(' ', '')));
 }
 
 List<int> parsingList(String val) {

@@ -5,9 +5,9 @@ import 'tictactoe3.dart';
 void main() {
   print("Mari Bermain Tic Tac Toe!");
   stdout.write("Silahkan Masukkan Nama Pemain 1 (\'X'): ");
-  String? playerOne = stdin.readLineSync();
+  String playerOne = stdin.readLineSync();
   stdout.write("Silahkan Masukkan Nama Pemain 2 (\'0'): ");
-  String? playerTwo = stdin.readLineSync();
+  String playerTwo = stdin.readLineSync();
 
   stdout.write("Mau ukuran papan berapa x berapa? ");
   int userChoice = int.parse(stdin.readLineSync().toString());
@@ -17,7 +17,7 @@ void main() {
       List.generate(userChoice, (_) => List.generate(userChoice, (_) => '_'));
   printBoard(initialBoard);
 
-  theGame(initialBoard, playerOne!, playerTwo!);
+  theGame(initialBoard, playerOne, playerTwo);
 }
 
 void theGame(List<List<String>> board, String playerOne, String playerTwo) {
@@ -27,9 +27,9 @@ void theGame(List<List<String>> board, String playerOne, String playerTwo) {
   do {
     stdout.write(
         'Giliran ${player1 == true ? playerOne : playerTwo} ${player1 == true ? '\(X)' : '\(0)'}, Masukkan Coordinat:');
-    String? input = stdin.readLineSync();
+    String input = stdin.readLineSync();
 
-    inputBoard(board, player1, parsingList(input!.replaceAll(' ', '')));
+    inputBoard(board, player1, parsingList(input.replaceAll(' ', '')));
 
     if (rowCheck(board) == true) {
       print(
